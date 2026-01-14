@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { InputBox } from "./components";
 import usecurrencyinfo from "./hook/usecurrencyinfo";
+import bg from "./assets/bg.jpg"
 
 function App() {
   const [amount, setamount] = useState(0);
@@ -26,7 +27,7 @@ function App() {
    if(amount === "") return;
     setconvertedamount(amount * currencyinfo[to]);
   };
-  const BackgroundImage = "https://i.pinimg.com/736x/ee/54/0d/ee540d5359b893f03b3a4ce73c647d5d.jpg";
+  const BackgroundImage = bg;
   return (
     <div
       className="w-full h-screen flex flex-wrap justify-center items-center bg-contain bg-no-repeat"
